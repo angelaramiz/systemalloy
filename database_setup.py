@@ -18,7 +18,7 @@ CREATE TABLE IF NOT EXISTS Aleaciones (
             id INTEGER PRIMARY KEY AUTOINCREMENT,
                 aleacion_id INTEGER,
                     ingrediente TEXT,
-                        cantidad INTEGER,
+             v           cantidad INTEGER,
                             FOREIGN KEY (aleacion_id) REFERENCES Aleaciones(id)
                             )
                             ''')
