@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Agregar Receta</title>
+</head>
+
+<body>
+
+  <h1>Ingresar Nueva Receta</h1>
+
+  <script>
+
+    const agregarReceta = () => {
+
+      // Solicitar datos
+      const nombre = prompt("Ingresa nombre de la receta");
+      const numIngredientes = parseInt(prompt("Número de ingredientes"));
+
+      const ingredientes = [];
+
+      for(let i = 1; i <= numIngredientes; i++) {
+        const ingrediente = prompt("Ingrediente #" + i);  
+        const cantidad = parseInt(prompt("Cantidad de " + ingrediente));
+        
+        ingredientes.push([ingrediente, cantidad]);  
+      }
+
+      // Imprimir resultado  
+      document.write(`
+        <h2>Nueva Receta ${nombre}</h2>
+        <p>['${nombre}', new Map(<br>
+        ${JSON.stringify(ingredientes)}<br>)],</p>
+      `);
+
+    }
+
+    agregarReceta();
+
+  </script>
+
+</body>
+</html>
